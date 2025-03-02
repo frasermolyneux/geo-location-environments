@@ -1,6 +1,6 @@
 locals {
-  resource_group_name    = "rg-geo-location-environments-${var.environment}-${var.location}"
-  app_configuration_name = "appcs-geo-location-${var.environment}-${var.location}"
+  resource_group_name    = "rg-geolocation-environments-${var.environment}-${var.location}"
+  app_configuration_name = "appcs-geolocation-${var.environment}-${var.location}"
 }
 
 locals {
