@@ -1,0 +1,13 @@
+{
+    "prefix": "maxmind",
+    "keys": [],
+    "secret_keys": [
+        {
+            "key": "userid"
+        },
+        {
+            "key": "apikey"
+        }
+    ],
+    "features": []
+}

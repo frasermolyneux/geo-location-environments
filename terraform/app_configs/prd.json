@@ -1,0 +1,15 @@
+{
+    "prefix": "prd",
+    "keys": [
+        {
+            "key": "test-key",
+            "value": "this-is-my-test-key"
+        },
+        {
+            "key": "another-test-key",
+            "value": "this-is-another-test-key"
+        }
+    ],
+    "secret_keys": [],
+    "features": []
+}
