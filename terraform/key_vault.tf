@@ -1,7 +1,7 @@
 resource "random_id" "config_id" {
   for_each = { for each in local.configs : each.prefix => each }
 
-  byte_length = 5
+  byte_length = 6
 }
 
 resource "azurerm_key_vault" "config_kv" {
