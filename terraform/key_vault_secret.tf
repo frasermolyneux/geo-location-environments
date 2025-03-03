@@ -5,6 +5,10 @@ resource "azurerm_key_vault_secret" "config_secret" {
   value        = "placeholder"
   key_vault_id = azurerm_key_vault.config_kv[each.value.prefix].id
 
+  content_type = "text/plain"
+
+  expiration_date = each.value.expiration
+
   lifecycle {
     ignore_changes = [value]
   }

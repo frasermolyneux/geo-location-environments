@@ -13,7 +13,8 @@ locals {
       value = lookup(key, "value", "")
     }]
     secret_keys = [for key in lookup(content, "secret_keys", []) : {
-      key = key.key
+      key        = key.key
+      expiration = lookup(key, "expiration", null)
     }]
   }]
 
@@ -31,9 +32,10 @@ locals {
   config_secret_keys = flatten([
     for config in local.configs : [
       for key in config.secret_keys : {
-        key      = format("%s-%s", config.prefix, key.key)
-        prefix   = config.prefix
-        key_name = key.key
+        key        = format("%s-%s", config.prefix, key.key)
+        prefix     = config.prefix
+        key_name   = key.key
+        expiration = key.expiration
       }
     ]
   ])
