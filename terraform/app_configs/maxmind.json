@@ -3,10 +3,10 @@
     "keys": [],
     "secret_keys": [
         {
-            "key": "userid"
+            "key": "Maxmind:UserId"
         },
         {
-            "key": "apikey"
+            "key": "MaxMind:ApiKey"
         }
     ],
     "features": []
