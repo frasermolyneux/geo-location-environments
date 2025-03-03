@@ -1,5 +1,5 @@
 {
-    "prefix": "webapi",
+    "label": "webapi",
     "keys": [
         {
             "key": "AzureAd:TenantId",

@@ -1,5 +1,5 @@
 {
-    "prefix": "dev",
+    "label": "dev",
     "keys": [
         {
             "key": "test-key",
