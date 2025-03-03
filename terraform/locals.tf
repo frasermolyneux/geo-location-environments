@@ -1,6 +1,8 @@
 locals {
   resource_group_name    = "rg-geolocation-environments-${var.environment}-${var.location}"
   app_configuration_name = "appcs-geolocation-${var.environment}-${var.location}"
+  webapp_identity_name   = "id-geolocation-webapp-${var.environment}"
+  webapi_identity_name   = "id-geolocation-webapi-${var.environment}"
 }
 
 locals {
