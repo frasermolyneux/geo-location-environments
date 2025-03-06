@@ -1,14 +1,10 @@
 resource "azurerm_role_assignment" "webapp_to_appconfig_role_assignment" {
-  for_each = { for each in local.configs : each.label => each }
-
   scope                = azurerm_app_configuration.app_configuration.id
   role_definition_name = "App Configuration Data Reader"
   principal_id         = azurerm_user_assigned_identity.webapp_identity.principal_id
 }
 
 resource "azurerm_role_assignment" "webapi_to_appconfig_role_assignment" {
-  for_each = { for each in local.configs : each.label => each }
-
   scope                = azurerm_app_configuration.app_configuration.id
   role_definition_name = "App Configuration Data Reader"
   principal_id         = azurerm_user_assigned_identity.webapi_identity.principal_id
